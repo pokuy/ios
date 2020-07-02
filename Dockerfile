@@ -19,7 +19,7 @@ RUN sudo apt-get -qq update \
 
 RUN sudo useradd --uid ${GROUP_USER_NUMBER} --user-group deno \
  && sudo mkdir /deno-dir/ \
- && chown deno:deno /deno-dir/
+ && sudo chown deno:deno /deno-dir/
 
 ENV DENO_DIR /deno-dir/
 
