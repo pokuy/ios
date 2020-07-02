@@ -17,7 +17,7 @@ RUN sudo apt-get -qq update \
  && sudo apt-get -qq clean \
  && sudo rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-RUN useradd --uid ${GROUP_USER_NUMBER} --user-group deno \
+RUN sudo useradd --uid ${GROUP_USER_NUMBER} --user-group deno \
  && mkdir /deno-dir/ \
  && chown deno:deno /deno-dir/
 
