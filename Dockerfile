@@ -18,7 +18,7 @@ RUN sudo apt-get -qq update \
  && sudo rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 RUN sudo useradd --uid ${GROUP_USER_NUMBER} --user-group deno \
- && mkdir /deno-dir/ \
+ && sudo mkdir /deno-dir/ \
  && chown deno:deno /deno-dir/
 
 ENV DENO_DIR /deno-dir/
