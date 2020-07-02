@@ -11,7 +11,7 @@ RUN sudo apt-get -qq update \
  && unzip deno.zip \
  && rm deno.zip \
  && chmod 777 deno \
- && mv deno /usr/bin/deno \
+ && sudo mv deno /usr/bin/deno \
  && sudo apt-get -qq remove -y ca-certificates curl unzip \
  && sudo apt-get -y -qq autoremove \
  && sudo apt-get -qq clean \
