@@ -15,7 +15,7 @@ RUN sudo apt-get -qq update \
  && sudo apt-get -qq remove -y ca-certificates curl unzip \
  && sudo apt-get -y -qq autoremove \
  && sudo apt-get -qq clean \
- && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+ && sudo rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 RUN useradd --uid ${GROUP_USER_NUMBER} --user-group deno \
  && mkdir /deno-dir/ \
