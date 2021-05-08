@@ -1,4 +1,4 @@
-FROM cimg/base:stable
+FROM python:3.8.2-alpine3.11
 
 ENV DENO_VERSION=1.1.1
 ENV GROUP_USER_NUMBER=3005
